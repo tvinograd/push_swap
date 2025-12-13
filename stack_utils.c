@@ -6,7 +6,7 @@
 /*   By: tvinogra <tvinogra@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 13:50:23 by tvinogra          #+#    #+#             */
-/*   Updated: 2025/12/13 14:03:38 by tvinogra         ###   ########.fr       */
+/*   Updated: 2025/12/13 20:54:44 by tvinogra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	free_stack(t_stack *stack)
 	t_node	*current;
 	t_node	*next;
 
-	if(!stack)
+	if (!stack)
 		return ;
 	current = stack->top;
 	while (current)
@@ -58,4 +58,20 @@ void	free_stack(t_stack *stack)
 		current = next;
 	}
 	free(stack);
+}
+
+void	add_node(t_stack *stack, t_node *new_node)
+{
+	t_node	*current;
+
+	if (!stack->top)
+		stack->top = new_node;
+	else
+	{
+		current = stack->top;
+		while (current->next)
+			current = current->next;
+		current->next = new_node;
+	}
+	stack->size++;
 }
