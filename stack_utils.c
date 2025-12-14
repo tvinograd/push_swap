@@ -6,7 +6,7 @@
 /*   By: tvinogra <tvinogra@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 13:50:23 by tvinogra          #+#    #+#             */
-/*   Updated: 2025/12/13 20:54:44 by tvinogra         ###   ########.fr       */
+/*   Updated: 2025/12/13 22:08:21 by tvinogra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ t_stack	*create_stack(void)
 	return (stack);
 }
 
-void	free_node(t_node *node)
+static void	free_node(t_node *node)
 {
 	if (node)
 		free(node);

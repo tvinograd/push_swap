@@ -6,13 +6,13 @@
 /*   By: tvinogra <tvinogra@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 16:52:18 by tvinogra          #+#    #+#             */
-/*   Updated: 2025/12/13 20:53:31 by tvinogra         ###   ########.fr       */
+/*   Updated: 2025/12/13 22:14:42 by tvinogra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_atoi_ps(const char *str, int *error)
+static int	ft_atoi_ps(const char *str, int *error)
 {
 	int		i;
 	int		sign;
@@ -47,7 +47,7 @@ int	ft_atoi_ps(const char *str, int *error)
 	return ((int)(result * sign));
 }
 
-void	free_split(char **split)
+static void	free_split(char **split)
 {
 	int	i;
 
@@ -62,7 +62,7 @@ void	free_split(char **split)
 	free(split);
 }
 
-int	ft_isduplicate(t_stack *stack, int value)
+static int	ft_isduplicate(t_stack *stack, int value)
 {
 	t_node	*current;
 
@@ -76,7 +76,7 @@ int	ft_isduplicate(t_stack *stack, int value)
 	return (0);
 }
 
-int	parse_argument(t_stack *stack, char *arg)
+static int	parse_argument(t_stack *stack, char *arg)
 {
 	char	**numbers;
 	int		value;
