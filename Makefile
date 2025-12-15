@@ -6,7 +6,7 @@
 #    By: tvinogra <tvinogra@student.42heilbronn.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/11 12:49:29 by tvinogra          #+#    #+#              #
-#    Updated: 2025/12/15 22:57:08 by tvinogra         ###   ########.fr        #
+#    Updated: 2025/12/16 00:29:51 by tvinogra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,8 @@ op_push.c \
 op_rot.c \
 op_rev_rot.c \
 radix.c \
-sort.c
+sort.c \
+main.c
 
 OBJS = $(SRCS:.c=.o)
 
