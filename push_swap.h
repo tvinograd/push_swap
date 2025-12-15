@@ -6,7 +6,7 @@
 /*   By: tvinogra <tvinogra@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 14:02:16 by tvinogra          #+#    #+#             */
-/*   Updated: 2025/12/14 01:03:11 by tvinogra         ###   ########.fr       */
+/*   Updated: 2025/12/15 11:04:55 by tvinogra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,18 @@ t_stack	*parse_arguments(int argc, char **argv);
 //int		find_index(int *sorted_array, int size, int value);
 void	assign_indices(t_stack *stack);
 int		get_max_bits(int stack_size);
+
+/// Operations
+void	sa(t_stack *stack_a, int print);
+void	sb(t_stack *stack_b, int print);
+void	ss(t_stack *stack_a, t_stack *stack_b);
+void	pa(t_stack *stack_a, t_stack *stack_b, int print);
+void	pb(t_stack *stack_a, t_stack *stack_b, int print);
+void	ra(t_stack *stack_a, int print);
+void	rb(t_stack *stack_b, int print);
+void	rr(t_stack *stack_a, t_stack *stack_b);
+void	rra(t_stack *stack_a, int print);
+void	rrb(t_stack *stack_b, int print);
+void	rrr(t_stack *stack_a, t_stack *stack_b);
 
 #endif
