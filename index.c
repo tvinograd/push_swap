@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   indexing.c                                         :+:      :+:    :+:   */
+/*   index.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tvinogra <tvinogra@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 22:06:31 by tvinogra          #+#    #+#             */
-/*   Updated: 2025/12/14 01:02:51 by tvinogra         ###   ########.fr       */
+/*   Updated: 2025/12/15 22:59:49 by tvinogra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ static int	find_index(int *sorted_array, int size, int value)
 	return (-1);
 }
 
-void	assign_indices(t_stack *stack)
+void	assign_index(t_stack *stack)
 {
 	int		*array;
 	int		*sorted;

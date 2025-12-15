@@ -6,7 +6,7 @@
 /*   By: tvinogra <tvinogra@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 14:02:16 by tvinogra          #+#    #+#             */
-/*   Updated: 2025/12/15 11:04:55 by tvinogra         ###   ########.fr       */
+/*   Updated: 2025/12/15 23:16:25 by tvinogra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,28 +29,20 @@ typedef struct s_stack
 	int		size;
 }	t_stack;
 
-// Stack utils
+// Stack
 t_node	*create_node(int value);
 t_stack	*create_stack(void);
-//void	free_node(t_node *node);
 void	free_stack(t_stack *stack);
 void	add_node(t_stack *stack, t_node *new_node);
 
-// Parsing
-//int		ft_atoi_ps(const char *str, int *error);
-//void	free_split(char **split);
-//int		ft_isduplicate(t_stack *stack, int value);
-//int		parse_argument(t_stack *stack, char *arg);
+// Parse
 t_stack	*parse_arguments(int argc, char **argv);
 
-// Indexing
-//int		*stack_to_array(t_stack *stack);
-//void	sort_array(int *array, int size);
-//int		find_index(int *sorted_array, int size, int value);
-void	assign_indices(t_stack *stack);
+// Index
+void	assign_index(t_stack *stack);
 int		get_max_bits(int stack_size);
 
-/// Operations
+// Operations
 void	sa(t_stack *stack_a, int print);
 void	sb(t_stack *stack_b, int print);
 void	ss(t_stack *stack_a, t_stack *stack_b);
@@ -62,5 +54,9 @@ void	rr(t_stack *stack_a, t_stack *stack_b);
 void	rra(t_stack *stack_a, int print);
 void	rrb(t_stack *stack_b, int print);
 void	rrr(t_stack *stack_a, t_stack *stack_b);
+
+// Sort
+void	radix(t_stack *stack_a, t_stack *stack_b);
+void	sort_stack(t_stack *stack_a, t_stack *stack_b);
 
 #endif

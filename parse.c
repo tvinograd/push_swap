@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parsing.c                                          :+:      :+:    :+:   */
+/*   parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tvinogra <tvinogra@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 16:52:18 by tvinogra          #+#    #+#             */
-/*   Updated: 2025/12/13 22:14:42 by tvinogra         ###   ########.fr       */
+/*   Updated: 2025/12/15 23:02:36 by tvinogra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ static void	free_split(char **split)
 	free(split);
 }
 
-static int	ft_isduplicate(t_stack *stack, int value)
+static int	is_duplicate(t_stack *stack, int value)
 {
 	t_node	*current;
 
@@ -94,7 +94,7 @@ static int	parse_argument(t_stack *stack, char *arg)
 		{
 			error = 0;
 			value = ft_atoi_ps(numbers[i], &error);
-			if (error || ft_isduplicate(stack, value))
+			if (error || is_duplicate(stack, value))
 				return (free_split(numbers), 0);
 			new_node = create_node(value);
 			if (!new_node)
@@ -108,7 +108,7 @@ static int	parse_argument(t_stack *stack, char *arg)
 	{
 		error = 0;
 		value = ft_atoi_ps(arg, &error);
-		if (error || ft_isduplicate(stack, value))
+		if (error || is_duplicate(stack, value))
 			return (0);
 		new_node = create_node(value);
 		if (!new_node)
