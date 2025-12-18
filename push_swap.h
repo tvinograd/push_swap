@@ -6,7 +6,7 @@
 /*   By: tvinogra <tvinogra@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 14:02:16 by tvinogra          #+#    #+#             */
-/*   Updated: 2025/12/18 14:24:18 by tvinogra         ###   ########.fr       */
+/*   Updated: 2025/12/18 20:41:09 by tvinogra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,14 @@ void	rrb(t_stack *stack_b, int print);
 void	rrr(t_stack *stack_a, t_stack *stack_b);
 
 // Sort
-void	radix(t_stack *stack_a, t_stack *stack_b);
+int		find_min(t_stack *stack);
+void	ra_fast(t_stack *stack, int position);
+void	sort_two(t_stack *stack_a);
+void	sort_three(t_stack *stack_a);
+void	sort_four(t_stack *stack_a, t_stack *stack_b);
+void	sort_five(t_stack *stack_a, t_stack *stack_b);
+void	sort_six(t_stack *stack_a, t_stack *stack_b);
+void	sort_radix(t_stack *stack_a, t_stack *stack_b);
 void	sort_stack(t_stack *stack_a, t_stack *stack_b);
 
 #endif

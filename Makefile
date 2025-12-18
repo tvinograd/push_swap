@@ -6,7 +6,7 @@
 #    By: tvinogra <tvinogra@student.42heilbronn.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/11 12:49:29 by tvinogra          #+#    #+#              #
-#    Updated: 2025/12/18 13:11:48 by tvinogra         ###   ########.fr        #
+#    Updated: 2025/12/18 20:40:57 by tvinogra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,8 @@ op_swap.c \
 op_push.c \
 op_rot.c \
 op_rev_rot.c \
-radix.c \
+sort_radix.c \
+sort_small.c \
 sort.c \
 main.c
 

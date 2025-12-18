@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   radix.c                                            :+:      :+:    :+:   */
+/*   sort_radix.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tvinogra <tvinogra@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 11:52:06 by tvinogra          #+#    #+#             */
-/*   Updated: 2025/12/18 13:07:11 by tvinogra         ###   ########.fr       */
+/*   Updated: 2025/12/18 20:41:23 by tvinogra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ static void	pa_all(t_stack *stack_a, t_stack *stack_b)
 		pa(stack_a, stack_b, 1);
 }
 
-void	radix(t_stack *stack_a, t_stack *stack_b)
+void	sort_radix(t_stack *stack_a, t_stack *stack_b)
 {
 	int	max_bits;
 	int	bit_position;

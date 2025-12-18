@@ -4,7 +4,7 @@ _This project has been created as part of the 42 curriculum by tvinogra._
 
 ## Description
 
-`push_swap` takes a list of integers and outputs s sequence of operations to sort them in ascending order using only two stacks (A and B).
+`push_swap` takes a list of integers and outputs a sequence of operations to sort them in ascending order using only two stacks (A and B).
 
 ### Goal
 Sort efficiently within these benchmarks:
@@ -12,7 +12,7 @@ Sort efficiently within these benchmarks:
 - 500 numbers: <= 8500 operations (80% grade)
 
 ### Algorithm
-Radix sort (binary) with special cases for 2-3 elements
+Radix sort (binary) with special cases for 2-6 elements
 1. Parse and validate input
 2. Normalize values to indices (0 to n-1)
 3. Process each bit position:
@@ -36,14 +36,15 @@ push_swap/
 ├── op_swap.c        # Swap operations
 ├── parse.c          # Parsing & validation
 ├── push_swap.h      # Header
-├── radix.c          # Radix sorting
+├── README.md        # Project overview
+├── sort_radix.c     # Radix sorting
+├── sort_small.c     # 2-6 numbers sorting
 ├── sort.c           # Sorting algorithms
 └── stack.c          # Stack management
 ```
 
 ### Limitations
 
-- No optimization for 4-5 elements (uses radix)
 - Higher operation count than optimal algorithms
 - Doesn't fully utilize combined operations (rr, rrr, ss)
 
@@ -88,6 +89,9 @@ cc push_swap.a main.c -o push_swap
 ```bash
 # Count operations
 ARG="[integers]"; ./push_swap $ARG | wc -l
+
+# Test with 100 random numbers
+ARG=$(seq 1 100 | sort -R | tr '\n' ' '); ./push_swap $ARG | wc -l
 
 # Verify with checker
 ARG="[integers]"; ./push_swap $ARG | ./checker_OS $ARG
