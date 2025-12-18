@@ -6,7 +6,7 @@
 /*   By: tvinogra <tvinogra@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 22:06:31 by tvinogra          #+#    #+#             */
-/*   Updated: 2025/12/15 22:59:49 by tvinogra         ###   ########.fr       */
+/*   Updated: 2025/12/18 13:02:20 by tvinogra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,24 @@ static void	sort_array(int *array, int size)
 	}
 }
 
+static int	*create_sorted_copy(int *array, int size)
+{
+	int	*sorted;
+	int	i;
+
+	sorted = (int *)malloc(sizeof(int) * size);
+	if (!sorted)
+		return (NULL);
+	i = 0;
+	while (i < size)
+	{
+		sorted[i] = array[i];
+		i++;
+	}
+	sort_array(sorted, size);
+	return (sorted);
+}
+
 static int	find_index(int *sorted_array, int size, int value)
 {
 	int	i;
@@ -72,28 +90,20 @@ static int	find_index(int *sorted_array, int size, int value)
 	return (-1);
 }
 
-void	assign_index(t_stack *stack)
+void	assign_indices(t_stack *stack)
 {
 	int		*array;
 	int		*sorted;
 	t_node	*current;
-	int		i;
 
 	if (!stack || stack->size == 0)
 		return ;
 	array = stack_to_array(stack);
 	if (!array)
 		return ;
-	sorted = (int *)malloc(sizeof(int) * stack->size);
+	sorted = create_sorted_copy(array, stack->size);
 	if (!sorted)
 		return (free(array));
-	i = 0;
-	while (i < stack->size)
-	{
-		sorted[i] = array[i];
-		i++;
-	}
-	sort_array(sorted, stack->size);
 	current = stack->top;
 	while (current)
 	{
@@ -102,21 +112,4 @@ void	assign_index(t_stack *stack)
 	}
 	free(array);
 	free(sorted);
-}
-
-int	get_max_bits(int stack_size)
-{
-	int	bits;
-	int	max_num;
-
-	if (stack_size <= 1)
-		return (0);
-	max_num = stack_size - 1;
-	bits = 0;
-	while (max_num > 0)
-	{
-		max_num = max_num >> 1;
-		bits++;
-	}
-	return (bits);
 }

@@ -6,7 +6,7 @@
 /*   By: tvinogra <tvinogra@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 14:02:16 by tvinogra          #+#    #+#             */
-/*   Updated: 2025/12/15 23:16:25 by tvinogra         ###   ########.fr       */
+/*   Updated: 2025/12/18 14:24:18 by tvinogra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,9 @@ typedef struct s_stack
 	int		size;
 }	t_stack;
 
+// ft_atoi for push_swap
+int		ft_atoi_ps(const char *str, int *error);
+
 // Stack
 t_node	*create_node(int value);
 t_stack	*create_stack(void);
@@ -39,8 +42,7 @@ void	add_node(t_stack *stack, t_node *new_node);
 t_stack	*parse_arguments(int argc, char **argv);
 
 // Index
-void	assign_index(t_stack *stack);
-int		get_max_bits(int stack_size);
+void	assign_indices(t_stack *stack);
 
 // Operations
 void	sa(t_stack *stack_a, int print);

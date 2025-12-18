@@ -6,7 +6,7 @@
 /*   By: tvinogra <tvinogra@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 23:26:46 by tvinogra          #+#    #+#             */
-/*   Updated: 2025/12/16 00:29:28 by tvinogra         ###   ########.fr       */
+/*   Updated: 2025/12/18 14:23:17 by tvinogra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,9 @@ int	main(int argc, char **argv)
 	stack_b = create_stack();
 	if (!stack_b)
 		return (free_stack(stack_a), 1);
-	assign_index(stack_a);
+	assign_indices(stack_a);
 	sort_stack(stack_a, stack_b);
 	free_stack(stack_a);
 	free_stack(stack_b);
-	return(0);
+	return (0);
 }
-

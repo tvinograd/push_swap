@@ -6,7 +6,7 @@
 /*   By: tvinogra <tvinogra@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 12:20:02 by tvinogra          #+#    #+#             */
-/*   Updated: 2025/12/15 23:16:15 by tvinogra         ###   ########.fr       */
+/*   Updated: 2025/12/18 11:43:03 by tvinogra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int	is_sorted(t_stack *stack)
 {
 	t_node	*current;
 
-	if(!stack || !stack->top)
+	if (!stack || !stack->top)
 		return (1);
 	current = stack->top;
 	while (current->next)
@@ -39,7 +39,7 @@ static void	sort_three(t_stack *stack_a)
 	int	first;
 	int	second;
 	int	third;
-	
+
 	first = stack_a->top->index;
 	second = stack_a->top->next->index;
 	third = stack_a->top->next->next->index;
@@ -66,8 +66,8 @@ void	sort_stack(t_stack *stack_a, t_stack *stack_b)
 	if (is_sorted(stack_a))
 		return ;
 	if (stack_a->size == 2)
-		return(sort_two(stack_a));
+		return (sort_two(stack_a));
 	if (stack_a->size == 3)
-		return(sort_three(stack_a));
+		return (sort_three(stack_a));
 	radix(stack_a, stack_b);
 }
