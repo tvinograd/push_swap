@@ -28,13 +28,13 @@ push_swap/
 ├── libft/           # 42's C library
 ├── ft_atoi_ps.c     # "atoi" adjusted for push_swap
 ├── index.c          # Indexing
-├── main.c           # Entry point
 ├── Makefile         # Build rules
 ├── op_push.c        # Push operations
 ├── op_rev_rot.c     # Reverse rotate operations
 ├── op_rot.c         # Rotate operations
 ├── op_swap.c        # Swap operations
 ├── parse.c          # Parsing & validation
+├── push_swap.c      # Main function
 ├── push_swap.h      # Header
 ├── README.md        # Project overview
 ├── sort_radix.c     # Radix sorting

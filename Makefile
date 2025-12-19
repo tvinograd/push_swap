@@ -6,7 +6,7 @@
 #    By: tvinogra <tvinogra@student.42heilbronn.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/11 12:49:29 by tvinogra          #+#    #+#              #
-#    Updated: 2025/12/19 13:40:23 by tvinogra         ###   ########.fr        #
+#    Updated: 2025/12/19 17:24:49 by tvinogra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,17 +20,17 @@ LIBFT = $(LIBFT_DIR)/libft.a
 
 SRCS = \
 ft_atoi_ps.c \
-stack.c \
-parse.c \
 index.c \
 op_swap.c \
 op_push.c \
 op_rot.c \
 op_rev_rot.c \
+parse.c \
+push_swap.c \
 sort_radix.c \
 sort_small.c \
 sort.c \
-main.c
+stack.c
 
 OBJS = $(SRCS:.c=.o)
 
