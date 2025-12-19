@@ -6,7 +6,7 @@
 #    By: tvinogra <tvinogra@student.42heilbronn.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/11 12:49:29 by tvinogra          #+#    #+#              #
-#    Updated: 2025/12/19 17:24:49 by tvinogra         ###   ########.fr        #
+#    Updated: 2025/12/19 17:36:53 by tvinogra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,9 +49,9 @@ clean:
 	@make -C $(LIBFT_DIR) clean
 	@$(RM) $(OBJS)
 
-fclean: clean
+fclean:
 	@make -C $(LIBFT_DIR) fclean
-	@$(RM) $(NAME)
+	@$(RM) $(OBJS) $(NAME)
 
 re: fclean all
 
