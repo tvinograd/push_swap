@@ -56,8 +56,6 @@ make        # Compile
 make clean  # Remove object files
 make fclean # Remove all generated files
 make re     # Recompile
-
-cc push_swap.a main.c -o push_swap
 ```
 
 ### Usage

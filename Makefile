@@ -6,15 +6,13 @@
 #    By: tvinogra <tvinogra@student.42heilbronn.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/11 12:49:29 by tvinogra          #+#    #+#              #
-#    Updated: 2025/12/18 20:40:57 by tvinogra         ###   ########.fr        #
+#    Updated: 2025/12/19 13:40:23 by tvinogra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = push_swap.a
+NAME = push_swap
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-AR = ar
-ARFLAGS = rcs
 RM = rm -f
 
 LIBFT_DIR = ./libft
@@ -36,16 +34,15 @@ main.c
 
 OBJS = $(SRCS:.c=.o)
 
-all: $(NAME)
+all: $(LIBFT) $(NAME)
 
 $(LIBFT):
 	@make -C $(LIBFT_DIR)
 
-$(NAME): $(LIBFT) $(OBJS)
-	@cp $(LIBFT) $(NAME)
-	@$(AR) $(ARFLAGS) $(NAME) $(OBJS)
+$(NAME): $(OBJS)
+	@$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o $(NAME)
 
-%.o: %.c
+%.o: %.c push_swap.h
 	@$(CC) $(CFLAGS) -c $< -o $@
 	
 clean:

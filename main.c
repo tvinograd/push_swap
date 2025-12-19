@@ -23,7 +23,7 @@ int	main(int argc, char **argv)
 	if (!stack_a)
 		return (1);
 	if (stack_a->size <= 1)
-		return (free(stack_a), 0);
+		return (free_stack(stack_a), 0);
 	stack_b = create_stack();
 	if (!stack_b)
 		return (free_stack(stack_a), 1);
